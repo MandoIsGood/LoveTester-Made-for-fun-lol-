@@ -5,6 +5,14 @@ const percentageElement = document.createElement('div');
 percentageElement.classList.add('percentage');
 fillBar.appendChild(percentageElement);
 
+// Check if names are already stored in localStorage
+const storedYourName = localStorage.getItem('yourName');
+const storedCrushName = localStorage.getItem('crushName');
+if (storedYourName && storedCrushName) {
+    document.getElementById('yourName').value = storedYourName;
+    document.getElementById('crushName').value = storedCrushName;
+}
+
 loveForm.addEventListener('submit', calculateLovePercentage);
 
 function calculateLovePercentage(e) {
@@ -12,6 +20,10 @@ function calculateLovePercentage(e) {
 
     const yourName = document.getElementById('yourName').value;
     const crushName = document.getElementById('crushName').value;
+
+    // Store the names in localStorage
+    localStorage.setItem('yourName', yourName);
+    localStorage.setItem('crushName', crushName);
 
     const lovePercentage = Math.floor(Math.random() * 101);
 
