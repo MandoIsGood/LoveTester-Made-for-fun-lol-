@@ -1,3 +1,13 @@
+const storedYourName = localStorage.getItem('yourName');
+const storedCrushName = localStorage.getItem('crushName');
+const storedYourNameElement = document.getElementById('storedYourName');
+const storedCrushNameElement = document.getElementById('storedCrushName');
+
+if (storedYourName && storedCrushName && storedYourNameElement && storedCrushNameElement) {
+    storedYourNameElement.textContent = storedYourName;
+    storedCrushNameElement.textContent = storedCrushName;
+}
+
 const loveForm = document.getElementById('loveForm');
 const resultDiv = document.getElementById('result');
 const fillBar = document.querySelector('.fill');
