@@ -1,11 +1,11 @@
+// Retrieve stored names and display them
 const storedYourName = localStorage.getItem('yourName');
 const storedCrushName = localStorage.getItem('crushName');
-const storedYourNameElement = document.getElementById('storedYourName');
-const storedCrushNameElement = document.getElementById('storedCrushName');
 
-if (storedYourName && storedCrushName && storedYourNameElement && storedCrushNameElement) {
-    storedYourNameElement.textContent = storedYourName;
-    storedCrushNameElement.textContent = storedCrushName;
+if (storedYourName && storedCrushName) {
+    // Replace the input fields with stored names
+    document.getElementById('yourName').innerHTML = storedYourName;
+    document.getElementById('crushName').innerHTML = storedCrushName;
 }
 
 const loveForm = document.getElementById('loveForm');
@@ -14,14 +14,6 @@ const fillBar = document.querySelector('.fill');
 const percentageElement = document.createElement('div');
 percentageElement.classList.add('percentage');
 fillBar.appendChild(percentageElement);
-
-// Check if names are already stored in localStorage
-const storedYourName = localStorage.getItem('yourName');
-const storedCrushName = localStorage.getItem('crushName');
-if (storedYourName && storedCrushName) {
-    document.getElementById('yourName').value = storedYourName;
-    document.getElementById('crushName').value = storedCrushName;
-}
 
 loveForm.addEventListener('submit', calculateLovePercentage);
 
