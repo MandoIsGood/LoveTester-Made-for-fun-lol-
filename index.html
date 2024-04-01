@@ -1,84 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mando The Top Dawg | Personal Website</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LoveTester</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header>
-    <nav>
-      <ul>
-        <li><a href="#about"><span></span> About Me</a></li>
-        <li><a href="#qualifications"><span></span> Qualifications</a></li>
-        <li><a href="#skills"><span></span> Skills</a></li>
-        <li><a href="#portfolio"><span></span> Portfolio</a></li>
-        <li><a href="#resume"><span></span> Resume</a></li>
-        <li><a href="#contact"><span></span> Contact</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <main>
-    <section id="about" class="section-with-bg">
-      <div class="section-content">
-        <h2 class="section-heading">About Me</h2>
-        <!-- Add your About Me content here -->
-      </div>
-      <div class="shape shape-1"></div>
-      <div class="shape shape-2"></div>
-    </section>
-
-    <section id="qualifications">
-      <div class="section-content">
-        <h2 class="section-heading">Qualifications</h2>
-        <!-- Add your Qualifications content here -->
-      </div>
-    </section>
-
-    <section id="skills" class="section-with-bg">
-      <div class="section-content">
-        <h2 class="section-heading">Skills</h2>
-        <!-- Add your Skills content here -->
-      </div>
-      <div class="shape shape-3"></div>
-    </section>
-
-    <section id="portfolio">
-      <div class="section-content">
-        <h2 class="section-heading">Portfolio</h2>
-        <!-- Add your Portfolio content here -->
-      </div>
-    </section>
-
-    <section id="resume" class="section-with-bg">
-      <div class="section-content">
-        <h2 class="section-heading">Resume</h2>
-        <!-- Add your Resume content here -->
-      </div>
-      <div class="shape shape-4"></div>
-    </section>
-
-    <section id="contact">
-      <div class="section-content">
-        <h2 class="section-heading">Contact</h2>
-        <!-- Add your Contact form here -->
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <p>&copy; Your Name</p>
-    <div class="social-icons">
-      <a href="#"><i class="fab fa-facebook"></i></a>
-      <a href="#"><i class="fab fa-twitter"></i></a>
-      <a href="#"><i class="fab fa-instagram"></i></a>
-      <a href="#"><i class="fab fa-linkedin"></i></a>
+    <div class="container">
+        <h1>LoveTester</h1>
+        <form id="loveForm">
+            <label for="yourName">Your Name:</label>
+            <input type="text" id="yourName" required>
+            <label for="crushName">Your Crush/Partner's Name:</label>
+            <input type="text" id="crushName" required>
+            <button type="submit">Calculate Love</button>
+        </form>
+        <div id="result">
+            <div class="heart"></div>
+            <div class="love-bar">
+                <div class="fill"></div>
+            </div>
+        </div>
     </div>
-  </footer>
-
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
